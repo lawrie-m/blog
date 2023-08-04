@@ -6,5 +6,6 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
-  "watchForFileChanges": false
+  "watchForFileChanges": false,
+  "experimentalSessionSupport": true
 });

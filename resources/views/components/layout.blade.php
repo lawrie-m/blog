@@ -16,8 +16,8 @@
     <section class="px-6 py-8">
         <nav class="md:flex md:justify-between md:items-center">
             <div>
-                <a href="/">
-                    <img src="/images/moutain.png" alt="Laracasts Logo" width="120" height="16">
+                <a href="/" id="logo">
+                    <img src="/images/moutain.png" alt="Blog Logo" width="120" height="16">
                 </a>
             </div>
 
@@ -42,11 +42,11 @@
                 </x-dropdown>
 
                 @else
-                <a href="/register" class="text-xs font-bold uppercase hover:text-green-500 {{ request()->is('register') ? 'text-green-500' : '' }}">Register</a>
-                <a href="/login" class="ml-6 text-xs font-bold uppercase hover:text-green-500 {{ request()->is('login') ? 'text-green-500' : '' }}">Log In</a>
+                <a href="/register" id="register" class="text-xs font-bold uppercase hover:text-green-500 {{ request()->is('register') ? 'text-green-500' : '' }}">Register</a>
+                <a href="/login" id="login" class="ml-6 text-xs font-bold uppercase hover:text-green-500 {{ request()->is('login') ? 'text-green-500' : '' }}">Log In</a>
                 @endauth
 
-                <a href="#newsletter" class="bg-green-500 ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-5 hover:bg-green-600 duration-300">
+                <a href="#newsletter" id="newsletterTop" class="bg-green-500 ml-3 rounded-full text-xs font-semibold text-white uppercase py-3 px-5 hover:bg-green-600 duration-300">
                     Subscribe for Updates
                 </a>
             </div>

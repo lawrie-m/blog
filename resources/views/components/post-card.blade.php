@@ -41,7 +41,7 @@
                 </div>
 
                 <div>
-                    <a href="/posts/{{$post->slug}}" class="transition-colors duration-300 text-xs font-semibold bg-gray-200 hover:bg-green-500 rounded-full py-2 px-8">
+                    <a id="readmore" href="/posts/{{$post->slug}}" class="transition-colors duration-300 text-xs font-semibold bg-gray-200 hover:bg-green-500 rounded-full py-2 px-8">
                         Read More
                     </a>
                 </div>

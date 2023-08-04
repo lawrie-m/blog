@@ -23,3 +23,50 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('adminLogin', (email, password) => { 
+    cy.session('adminLogin', () => {
+        
+    cy.visit('http://127.0.0.1:8000/login')
+
+    cy.viewport('macbook-15')
+
+    
+    cy.get('input[type=email]').type('lawrie@email.com')
+
+    cy.get('input[type=password]').type('password')
+
+    cy.get('form').first().within(() => {
+        cy.get('button').click()   
+    })
+        
+    cy.get('#nav').should('contain', 'Welcome')
+    })
+
+    cy.visit('http://127.0.0.1:8000')
+
+    cy.viewport('macbook-15')
+})
+ 
+Cypress.Commands.add('nonAdminLogin', (email, password) => { 
+    cy.session('nonAdminLogin', () => {
+        
+    cy.visit('http://127.0.0.1:8000/login')
+
+    cy.viewport('macbook-15')
+
+    
+    cy.get('input[type=email]').type('cypresstest@email.com')
+
+    cy.get('input[type=password]').type('password')
+
+    cy.get('form').first().within(() => {
+        cy.get('button').click()   
+    })
+        
+    cy.get('#nav').should('contain', 'Welcome')
+    })
+
+    cy.visit('http://127.0.0.1:8000')
+
+    cy.viewport('macbook-15')
+})

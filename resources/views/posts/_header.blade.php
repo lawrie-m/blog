@@ -36,6 +36,7 @@
                         <input type="hidden" name="category" value="{{request('category')}}">
                     @endif
                     <input type="text" 
+                        id="searchbar"
                         name="search" 
                         placeholder="Find something" 
                         class="bg-transparent placeholder-black font-semibold text-sm" 
