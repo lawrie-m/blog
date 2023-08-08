@@ -5,7 +5,7 @@ describe('check, nav as guest (not signed in/registered)', () => {
       cy.viewport('macbook-15')
   })
   
-  it('Visits the Blog', () => {
+  it('Checks header nav', () => {
       
     cy.get('#logo')
       .invoke('attr', 'href')

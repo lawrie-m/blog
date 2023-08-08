@@ -4,7 +4,7 @@ describe('check, nav as admin', () => {
         cy.adminLogin('lawrie@email.com', 'password')
   })
   
-  it('Visits the Blog', () => {
+  it('Checks header nav', () => {
       
     cy.get('#logo')
       .invoke('attr', 'href')

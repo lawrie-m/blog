@@ -5,7 +5,7 @@ describe('check, nav as admin', () => {
       cy.viewport('macbook-15')
   })
   
-  it('Visits the Blog', () => {
+  it('Tests category dropdown', () => {
       
     cy.get('#dropdown')
       .click()
