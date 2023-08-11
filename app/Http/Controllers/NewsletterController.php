@@ -14,7 +14,8 @@ class NewsletterController extends Controller
 
         try {
             $newsletter->subscribe(request('email'));
-        } catch (Exception $e) {
+        } catch (\GuzzleHttp\Exception\ClientException $e) {
+
             throw ValidationException::withMessages([
                 'email' => 'This email could not be added to our newsletter list.'
             ]);
