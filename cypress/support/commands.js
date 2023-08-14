@@ -70,3 +70,9 @@ Cypress.Commands.add('nonAdminLogin', (email, password) => {
 
     cy.viewport('macbook-15')
 })
+
+Cypress.Commands.add('setMobileViewport', () => { 
+    cy.visit('http://127.0.0.1:8000')
+
+    cy.viewport('iphone-13')
+})
